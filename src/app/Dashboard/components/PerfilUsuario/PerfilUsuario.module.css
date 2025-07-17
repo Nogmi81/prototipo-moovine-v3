@@ -1,0 +1,424 @@
+/* --- ESTILOS BASE / PADRÕES --- */
+/* Estes estilos aplicam-se a todos os tamanhos de tela por padrão,
+   e serão sobrescritos pelas Media Queries específicas se necessário. */
+
+.mainMenuButton {
+  background-color: #A349A4;
+  color: #FFF;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 5px;
+}
+
+.mainMenuButton:hover {
+  background-color: #FF7F26;
+}
+
+.arrowIcon {
+  transition: transform 0.2s ease;
+  /* Cor padrão para o ícone, pode ser sobrescrita em media queries */
+  color: #FFF;
+}
+
+.subMenu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+
+.subMenuItem {
+  background-color: #9a519a; /* NOVO: Tom de roxo mais forte */
+  color: #FFF;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.subMenuItem:hover {
+  background-color: #FF7F26;
+}
+
+.subSubMenu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3px;
+  margin-top: 2px; /* ALTERADO: Reduzido o espaçamento superior para ficar mais próximo */
+}
+
+.subSubMenuItem {
+  background-color: #c06fc0;
+  color: #FFF;
+  padding: 5px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subSubMenuItem:hover {
+  background-color: #FF7F26;
+}
+
+/* ADICIONE ESTAS REGRAS PARA A CLASSE .subSubMenuItem:disabled */
+.subSubMenuItem:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+
+.btnPerfil {
+  background-color: #A349A4;
+  color: #FFF;
+  padding: 5px 7px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%; /* Padrão de largura total, ajustado em media queries */
+  margin-top: 2px; /* Margem padrão, pode ser removida em media queries */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnPerfil:hover {
+  background-color: #FF7F26;
+}
+
+.btnPerfil:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.btnHome {
+  background-color: #A349A4;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+  padding: 3px 7px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%; /* Padrão de largura total, ajustado em media queries */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnHome:hover {
+  background-color: #FF7F26;
+}
+
+.btnHome:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.googleMessage {
+  background-color: #333;
+  color: #FFF;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.googleSpan {
+  background-color: #DB4437;
+  padding: 2px 8px;
+  border-radius: 4px;
+  gap: 10px;
+}
+
+/* Propriedades gerais para os contêineres principais */
+.containerPerfil {
+  box-sizing: border-box;
+  width: 100%;
+  /* Mantido o min-height existente e adicionado padding-bottom */
+  min-height: calc(100vh - 4rem - 10vh); /* Ajustado para desktop */
+  background: #FFF;
+  border: #FF7F26 solid 2px;
+  gap: 20px;
+  display: flex; /* Padrão flex, direção definida nas MQs */
+  padding-bottom: calc(10vh + 2rem); /* Padding para o rodapé em desktop (10vh footer + 2rem safety) */
+}
+
+.perfilConteudo {
+  position: relative;
+  padding: 20px; /* Padding padrão, ajustado nas MQs */
+  gap: 20px; /* Gap padrão, ajustado nas MQs */
+  align-self: flex-start; /* Alinhamento padrão, ajustado nas MQs */
+  box-sizing: border-box; /* Adicionado para cálculo de largura consistente com padding */
+}
+
+.fotoPerfil {
+  border-radius: 50%;
+  object-fit: cover;
+  /* Tamanho definido em media queries */
+}
+
+.verticalDivider {
+  width: 2px;
+  height: 100%;
+  background-color: #FF7F26;
+  /* Display definido em media queries */
+}
+
+.alterarContainer {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px; 
+}
+
+/* O menu mobile é oculto por padrão e exibido apenas em sua media query */
+.menuContainerMobile {
+  display: none;
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+/* Media Query para viewports menores que 469px (mobile) */
+@media (max-width: 468px) {
+  .fotoPerfil {
+    display: none; /* Inibe a visualização da foto de perfil */
+  }
+
+  .containerPerfil {
+    flex-direction: column; /* Altera a direção para coluna em mobile */
+    height: auto; /* Ajusta a altura para conteúdo dinâmico */
+    min-height: calc(100vh - 4rem - 70px); /* Ajustado para mobile (considerando o menu mobile de ~70px) */
+    padding: 10px; /* Reduz o padding */
+    padding-bottom: calc(70px + 1rem); /* Adiciona espaço para o menu fixo inferior (70px menu + 1rem safety) */
+    border: none;
+  }
+
+  .perfilConteudo {
+    width: 100%; /* Ocupa a largura total */
+    padding: 10px 0; /* Ajusta o padding */
+    gap: 10px;
+    align-self: unset; /* Remove o align-self para mobile */
+  }
+
+  .verticalDivider {
+    display: none; /* Oculta o divisor vertical */
+  }
+
+  .alterarContainer {
+    width: 100%;
+    height: auto;
+    margin-top: 0px; 
+    padding: 15px; 
+  }
+
+  .btsPerfil {
+    display: none; /* Oculta os botões originais no mobile */
+  }
+
+  /* Estilos para o menu mobile */
+  .menuContainerMobile {
+    display: flex; /* Exibe o novo menu para mobile */
+    flex-direction: column; /* Padrão: botão embaixo, submenus em cima (recolhido) */
+    position: fixed; /* Fixa o menu na parte inferior da PÁGINA (viewport) */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #FFF;
+    /* border-top: 2px solid #FF7F26; */
+    z-index: 1000;
+    align-items: center;
+    justify-content: flex-end; /* Alinha o conteúdo ao fundo (útil para o botão) */
+  }
+
+  .menuContainerMobile.expandedMenu {
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+  }
+
+  /* Adicionado padding-top para o .subMenu */
+  .subMenu {
+    padding-top: 15px; /* NOVO: Espaçamento do topo do menu para o primeiro botão */
+  }
+
+  /* Ajuste para o ícone do botão principal do menu mobile para parecer "negrito" */
+  .menuContainerMobile .arrowIcon {
+    color: #FFF; /* Alterado para branco */
+    font-size: 1.5em; /* Aumentar o tamanho também pode dar um efeito de "bold" */
+  }
+
+  .subMenu {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .googleMessage {
+    padding: 5px 10px;
+    font-size: 0.9em;
+  }
+}
+
+
+/* Media Query para viewports entre 469px e 645px (tablet e intermediário) */
+@media (min-width: 469px) and (max-width: 645px) {
+  .containerPerfil {
+    flex-direction: column; /* ALTERADO: Conteúdo principal (perfil + formulário) em coluna */
+    height: auto; /* Ajusta a altura para acomodar o conteúdo empilhado */
+    min-height: calc(100vh - 4rem - 5vh); /* Ajustado para tablets */
+    padding: 15px 20px;
+    padding-bottom: calc(5vh + 2rem); /* Padding para o rodapé em tablet (5vh footer + 2rem safety) */
+    gap: 20px; /* Mantido o gap entre perfilConteudo e alterarContainer */
+  }
+
+  .perfilConteudo {
+    display: flex;
+    flex-direction: row; /* Foto de perfil e botões LADO A LADO */
+    align-items: center; /* Alinha verticalmente foto e botões */
+    gap: 15px; /* Reduzi o gap entre a foto e os botões */
+    padding: 20px;
+    align-self: center; /* NOVO: Centraliza o bloco perfilConteudo horizontalmente */
+    max-width: fit-content; /* NOVO: Permite que a largura se ajuste ao conteúdo para centralização */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .fotoPerfil {
+    width: 120px; /* Aumentado o tamanho da foto */
+    height: 120px; /* Aumentado o tamanho da foto */
+    margin-right: 20px; /* NOVO: Afasta a foto do menu */
+  }
+
+  .btsPerfil {
+    display: flex;
+    flex-direction: column; /* Botões um abaixo do outro, à direita da foto */
+    padding: 3px 5px;
+    gap: 8px; /* Reduzido o espaçamento entre os botões */
+    width: 120px; /* Reduzi a largura do contêiner dos botões */
+    min-width: 100px; /* Reduzi o mínimo */
+  }
+
+  .btnPerfil,
+  .btnHome {
+    width: 100%; /* Botões preenchem a largura do seu contêiner */
+    font-size: 0.9em; /* Reduzido o tamanho da fonte dos botões */
+    padding: 3px 5px; /* Reduzido o padding vertical dos botões */
+    margin-top: 15px; /* Remove a margem superior padrão */
+  }
+
+  .verticalDivider {
+    display: none; /* OCULTADO: Divisor vertical não é necessário em layout de coluna */
+  }
+
+  .alterarContainer {
+    width: 100%; /* Ocupa a largura total disponível dentro do containerPerfil */
+    max-width: 600px; /* Adicionado um max-width para o formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+    height: 100%; /* Mantido para que o conteúdo se alinhe verticalmente */
+    /* Padding para tablet (interno do container branco) */
+    padding: 20px;
+  }
+
+  .googleMessage {
+    font-size: 0.95em;
+  }
+
+  .menuContainerMobile {
+    display: none; /* Oculta o menu mobile */
+  }
+}
+
+
+/* Media Query para viewports maiores que 645px (desktop) */
+@media (min-width: 646px) { /* ALTERADO: O breakpoint de desktop agora começa aqui */
+  .containerPerfil {
+    flex-direction: row; /* Conteúdo do perfil e formulário lado a lado */
+    padding: 15px 20px;
+    gap: 20px;
+    height: calc(100vh - 4rem - 10vh); /* Retorna à altura fixa em desktop */
+  }
+
+  .perfilConteudo {
+    display: flex;
+    flex-direction: column; /* Foto e botões em coluna */
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    align-self: flex-start;
+  }
+
+  .fotoPerfil {
+    width: 150px; /* Tamanho padrão da foto em desktop */
+    height: 150px;
+  }
+
+  .btsPerfil {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Ocupa a largura do perfilConteudo */
+  }
+
+  .verticalDivider {
+    display: block; /* Garante que o divisor vertical seja visível */
+  }
+
+  .alterarContainer {
+    flex-grow: 1; /* Permite que o formulário cresça para preencher o espaço */
+    max-width: none; /* Remove o max-width para desktop */
+    margin: unset; /* Remove o margin auto para desktop */
+    /* Padding para desktop (interno do container branco) */
+    padding: 20px;
+  }
+
+  .menuContainerMobile {
+    display: none; /* Escondido por padrão para desktop */
+  }
+
+   .googleMessage {
+    font-size: 0.95em;
+  }
+}

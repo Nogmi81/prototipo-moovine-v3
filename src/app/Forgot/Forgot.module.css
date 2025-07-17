@@ -1,0 +1,136 @@
+/* Forgot.module.css */
+.container {
+    min-height: 90vh; /* Define a altura para 90% da altura da viewport */
+    display: flex; /* Usa flexbox para centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.containerForm {
+    max-width: 500px; /* Ajustado para um contêiner de formulário ligeiramente maior */
+    width: 90%; /* Permite que seja responsivo */
+    padding: 30px 40px; /* Preenchimento ajustado para melhor espaçamento dentro da caixa do formulário */
+    background-color: #f9f9f9; /* Fundo claro para a caixa do formulário */
+    border-radius: 10px; /* Cantos arredondados para a caixa do formulário */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para a caixa do formulário */
+    text-align: center; /* Centraliza o texto dentro da caixa do formulário */
+}
+
+.containerForm h2 {
+    color: #A349A4; /* Cor especificada para o H2 */
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-align: center; /* Garante que o h2 esteja centralizado */
+}
+
+.containerForm p {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    text-align: center; /* Garante que o p esteja centralizado */
+}
+
+.containerForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Espaçamento entre os elementos do formulário */
+    align-items: center; /* Centraliza os elementos do formulário */
+}
+
+.containerForm form label {
+    width: 100%;
+    max-width: 350px; /* Limita a largura do input para melhor visual */
+    text-align: left; /* Alinha o texto do span à esquerda */
+    display: flex;
+    flex-direction: column;
+}
+
+.containerForm form span {
+    color: #A349A4; /* Cor especificada para os rótulos de input */
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1em;
+    display: block; /* Garante que atue como um elemento de bloco */
+}
+
+.containerForm form input {
+    width: 100%; /* Ocupa 100% da largura do label */
+    padding: 12px 15px;
+    border: 2px solid #FF7F26; /* Cor da borda para os inputs */
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none; /* Remove o contorno padrão ao focar */
+    transition: border-color 0.3s ease; /* Transição suave para a cor da borda */
+}
+
+.containerForm form input:focus {
+    border-color: #7a367c; /* Um tom ligeiramente diferente ao focar */
+    box-shadow: 0 0 0 3px rgba(163, 73, 164, 0.2); /* Sombra sutil ao focar */
+}
+
+.btn {
+    background-color: #A349A4; /* Cor especificada para o botão */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 350px; /* Mesma largura dos inputs para uniformidade */
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #7a367c; /* Tom mais escuro ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de "levantar" */
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.loading {
+    background-color: #B5E61D; /* Cor de carregamento correspondente de EstiloFormDashboard.module.css */
+    cursor: wait;
+    opacity: 0.6;
+}
+
+/* Estilo para mensagens */
+.error {
+    color: red !important;
+    font-size: 0.9em !important;
+    font-weight: bold;
+    margin: 10px auto;
+    padding: 8px !important;
+    max-width: 900px !important;
+    gap: 3px;
+}
+
+.success {
+    color: green !important;
+    font-size: 0.9em !important;
+    font-weight: bold;
+    margin: 10px auto;
+    padding: 8px !important;
+    max-width: 900px !important;
+    gap: 3px;
+}
+
+.linkLogin a{
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #A349A4;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 1.5rem;
+    padding: 5px 15px;    
+}
+
+.linkLogin a:hover {
+     background-color: #FF7F26;
+}

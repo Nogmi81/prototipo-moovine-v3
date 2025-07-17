@@ -1,0 +1,72 @@
+/* components/Modal/Modal.module.css */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;  
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro translúcido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Garante que fique acima de tudo */
+}
+
+.modalContent {
+  background-color: #A349A4;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 500px; /* Largura máxima do modal */
+  width: 90%; /* Responsividade */
+  text-align: center; /* Centraliza o texto dentro do modal */
+  animation: fadeInScale 0.3s ease-out; /* Animação simples */
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.modalHeader h2 {
+  margin: 0;
+  color: #FFF;
+  font-size: 1.5em;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #FFF;
+  padding: 5px;
+}
+
+.closeButton:hover {
+  color: #CCC;
+}
+
+.modalBody {
+  line-height: 1.6;
+}
+
+.modalBody p{
+  color: #FFF;
+  line-height: 1.6;
+} 
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

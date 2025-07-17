@@ -1,0 +1,122 @@
+/* Base styles for all elements */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100%; /* Garante que html e body ocupem a altura total da viewport */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Cores e variáveis CSS (opcional, mas recomendado) */
+:root {
+  --header-bg-color: #FF7F26;
+  --main-footer-color: #A349A4;
+  --text-color: #333;
+}
+
+/* Header Styles (MANTENHA EXATAMENTE COMO ESTAVA ANTES DA MINHA ÚLTIMA SUGESTÃO PARA NÃO AFETAR O HEADER) */
+.header {
+  background-color: var(--header-bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem; /* Espaçamento entre os ícones */
+}
+
+.socialIcons img {
+  display: block; /* Remove o espaço extra abaixo da imagem */
+  max-width: 30px;
+  height: auto;
+}
+
+/* Main Styles - APENAS GARANTA O FLEX-GROW: 1 AQUI */
+.main {
+  flex-grow: 1; /* ESSENCIAL para que o main preencha o espaço restante */
+  /* Remova qualquer altura fixa ou min-height aqui.
+     O background-color e padding do main serão gerenciados pelo Home.module.css
+     ou por estilos específicos das páginas internas. */
+}
+
+/* Footer Styles - MOVIMENTADO E AJUSTADO DO Footer.module.css */
+.footer {
+  background-color: #A349A4; /* Cor de fundo do footer */
+  padding: 1.5rem; /* Padding interno */
+  text-align: center;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  color: white; /* Cor do texto no footer */
+  /* REMOVIDO: position: fixed, bottom, left, width, z-index, height */
+  /* A altura será determinada pelo conteúdo e padding */
+}
+
+.footer .socialIcons { /* Seletor mais específico para os ícones do footer */
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centraliza os ícones */
+    padding: 0;
+    margin: 0;
+}
+
+.footer .socialIcons img {
+	max-height: 25px;
+	max-width: 25px;
+  margin: 0 1.5rem;
+}
+
+/* Media Queries para Responsividade do Footer */
+@media (max-width: 468px) {
+  .footer {
+    display: none; /* Oculta o rodapé em telas muito pequenas */
+  }
+}
+
+@media (min-width: 469px) and (max-width: 645px) {
+  .footer {
+    display: block; /* Garante visibilidade */
+    padding: 1.5rem;
+  }
+
+  .footer .socialIcons img {
+	  max-height: 22px;
+	  max-width: 22px;
+    padding-bottom: 3px;
+    margin: 0 1.5rem;
+  }
+}
+
+@media (min-width: 646px) {
+  .footer {
+    display: block; /* Garante visibilidade */
+    padding: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

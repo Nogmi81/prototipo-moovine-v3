@@ -1,0 +1,48 @@
+/* Estilo antigo da página de boas-vindas agora substituído por <Initial /> */
+.welcomePage {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column; /* Adicionado para que o conteúdo possa quebrar linhas se for o caso */
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  background: linear-gradient(to right, #FF7F26, #FFA94D);
+  /* background: linear-gradient(to right, #A349A4, #EA3FF7); */
+  color: #FFF;
+  font-size: 2em; /* Tamanho base da fonte */
+  font-weight: bold;
+  text-align: center;
+  padding: 10px; /* Adicionado um padding base para evitar que o texto encoste nas bordas */
+  box-sizing: border-box; /* Garante que o padding seja incluído na largura/altura */
+}
+
+/* Adicionando estilos para os elementos de texto dentro de .welcomePage se houverem,
+   ou podemos ajustar o font-size do próprio .welcomePage */
+.welcomePage h1, .welcomePage p { /* Se houverem tags H1 ou P dentro */
+    margin: 0; /* Remove margens padrão que podem atrapalhar o espaçamento */
+    line-height: 1.2; /* Ajusta a altura da linha para texto grande */
+}
+
+@media (min-width: 469px) and (max-width: 645px) {
+  .welcomePage {
+    height: auto;
+    font-size: 1.5em; /* Reduz o tamanho da fonte para esta faixa */
+    padding: 10px 15px; /* Aumenta um pouco o padding horizontal */
+    /* Remove 'gap: 20px;' pois não parece ser relevante ou estava comentado */
+  }
+
+  .welcomePage h1, .welcomePage p {
+      font-size: 1em; /* Garante que elementos de texto internos se ajustem */
+  }
+}
+
+/* Para telas ainda menores, abaixo de 469px, se necessário */
+@media (max-width: 468px) {
+    .welcomePage {
+        font-size: 1.2em; /* Reduz ainda mais para telas muito pequenas */
+        padding: 8px 10px;
+    }
+    .welcomePage h1, .welcomePage p {
+        font-size: 0.9em;
+    }
+}

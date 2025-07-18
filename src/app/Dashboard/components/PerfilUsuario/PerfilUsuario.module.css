@@ -2,96 +2,6 @@
 /* Estes estilos aplicam-se a todos os tamanhos de tela por padrão,
    e serão sobrescritos pelas Media Queries específicas se necessário. */
 
-.mainMenuButton {
-  background-color: #A349A4;
-  color: #FFF;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  font-size: 1.2em;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  border-radius: 5px;
-}
-
-.mainMenuButton:hover {
-  background-color: #FF7F26;
-}
-
-.arrowIcon {
-  transition: transform 0.2s ease;
-  /* Cor padrão para o ícone, pode ser sobrescrita em media queries */
-  color: #FFF;
-}
-
-.subMenu {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 8px;
-}
-
-.subMenuItem {
-  background-color: #9a519a; /* NOVO: Tom de roxo mais forte */
-  color: #FFF;
-  padding: 8px 15px;
-  border: none;
-  cursor: pointer;
-  font-size: 1.1em;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-}
-
-.subMenuItem:hover {
-  background-color: #FF7F26;
-}
-
-.subSubMenu {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 3px;
-  margin-top: 2px; /* ALTERADO: Reduzido o espaçamento superior para ficar mais próximo */
-}
-
-.subSubMenuItem {
-  background-color: #c06fc0;
-  color: #FFF;
-  padding: 5px 15px;
-  border: none;
-  cursor: pointer;
-  font-size: 1em;
-  font-family: Arial, Helvetica, sans-serif;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.subSubMenuItem:hover {
-  background-color: #FF7F26;
-}
-
-/* ADICIONE ESTAS REGRAS PARA A CLASSE .subSubMenuItem:disabled */
-.subSubMenuItem:disabled {
-  background-color: #ccc;
-  color: #666;
-  cursor: not-allowed;
-  opacity: 0.7;
-}
-
-
 .btnPerfil {
   background-color: #A349A4;
   color: #FFF;
@@ -255,43 +165,6 @@
     display: none; /* Oculta os botões originais no mobile */
   }
 
-  /* Estilos para o menu mobile */
-  .menuContainerMobile {
-    display: flex; /* Exibe o novo menu para mobile */
-    flex-direction: column; /* Padrão: botão embaixo, submenus em cima (recolhido) */
-    width: 100%;
-    height: 4rem;
-    padding: 8px;
-    box-sizing: border-box;
-    background-color: #FFF;
-    z-index: 1000;
-    align-items: center;
-    justify-content: flex-end; /* Alinha o conteúdo ao fundo (útil para o botão) */
-  }
-
-  .menuContainerMobile.expandedMenu {
-    justify-content: flex-start;
-    flex-direction: column-reverse;
-  }
-
-  /* Adicionado padding-top para o .subMenu */
-  .subMenu {
-    padding-top: 15px; /* NOVO: Espaçamento do topo do menu para o primeiro botão */
-  }
-
-  /* Ajuste para o ícone do botão principal do menu mobile para parecer "negrito" */
-  .menuContainerMobile .arrowIcon {
-    color: #FFF; /* Alterado para branco */
-    font-size: 1.5em; /* Aumentar o tamanho também pode dar um efeito de "bold" */
-  }
-
-  .subMenu {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
   .googleMessage {
     padding: 5px 10px;
     font-size: 0.9em;
@@ -361,10 +234,7 @@
   .googleMessage {
     font-size: 0.95em;
   }
-
-  .menuContainerMobile {
-    display: none; /* Oculta o menu mobile */
-  }
+  
 }
 
 
@@ -410,11 +280,7 @@
     padding: 20px;
   }
 
-  .menuContainerMobile {
-    display: none; /* Escondido por padrão para desktop */
-  }
-
-   .googleMessage {
+  .googleMessage {
     font-size: 0.95em;
   }
 }

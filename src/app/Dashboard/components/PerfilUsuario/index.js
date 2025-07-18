@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import perfilSemFoto from "../../../../../public/perfilSemFoto.jpg";
 import styles from "./PerfilUsuario.module.css";
 import AlterarNome from "../AlterarNome";
 import AlterarEmail from "../AlterarEmail";
@@ -121,7 +122,7 @@ const PerfilUsuario = ({ user }) => {
 
   // Definindo a URL da foto de perfil
   // Prioriza a photoURL do usuário, caso contrário, usa a imagem padrão
-  const userPhotoUrl = user && user.photoURL ? user.photoURL : "https://images.unsplash.com/photo-1544723795-3fb6469f5b39";
+  const userPhotoUrl = user && user.photoURL ? user.photoURL : perfilSemFoto;
 
   return (
     <>

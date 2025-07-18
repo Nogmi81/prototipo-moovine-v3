@@ -259,15 +259,11 @@
   .menuContainerMobile {
     display: flex; /* Exibe o novo menu para mobile */
     flex-direction: column; /* Padrão: botão embaixo, submenus em cima (recolhido) */
-    position: fixed; /* Fixa o menu na parte inferior da PÁGINA (viewport) */
-    bottom: 0;
-    left: 0;
-    right: 0;
     width: 100%;
-    padding: 10px;
+    height: 4rem;
+    padding: 8px;
     box-sizing: border-box;
     background-color: #FFF;
-    /* border-top: 2px solid #FF7F26; */
     z-index: 1000;
     align-items: center;
     justify-content: flex-end; /* Alinha o conteúdo ao fundo (útil para o botão) */
